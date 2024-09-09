@@ -22,9 +22,6 @@ export class Ball extends Phaser.GameObjects.Sprite {
         const body = this.body as Phaser.Physics.Arcade.Body;
 
         this.setOrigin(0.5);
-
-
-
         // Set the ball to collide with the world bounds
         body.setCollideWorldBounds(true);
 
@@ -33,6 +30,9 @@ export class Ball extends Phaser.GameObjects.Sprite {
 
         // Set initial velocity of the ball
         body.setVelocity(150, -150);
+
+        // tell the ball to respond to events when colliding with world bounds
+        body.onWorldBounds = true;
     }
 
 }
