@@ -1,4 +1,7 @@
 import { Scene } from 'phaser';
+import { Assets } from '../enums/asset';
+import assetsMap from '../maps/assetsMap';
+import { GameScene } from '../enums/gameScene';
 
 export class Preloader extends Scene {
     constructor() {
@@ -28,7 +31,8 @@ export class Preloader extends Scene {
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
 
-        this.load.image('logo', 'logo.png');
+        this.load.image(Assets.Ball, assetsMap[Assets.Ball]);
+
     }
 
     create() {
@@ -36,6 +40,6 @@ export class Preloader extends Scene {
         //  For example, you can define global animations here, so we can use them in other scenes.
 
         //  Move to the Game. You could also swap this for a Scene Transition, such as a camera fade.
-        this.scene.start('Game');
+        this.scene.start(GameScene.Game);
     }
 }
