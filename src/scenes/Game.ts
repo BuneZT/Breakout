@@ -12,6 +12,7 @@ export class Game extends Scene {
     }
 
     create() {
+        this.cameras.main.setBackgroundColor('#191919');
         this.ball = new Ball(this, this.canvas.width * 0.5, this.canvas.height - 25);
         this.paddle = new Paddle(this, this.canvas.width * 0.5, this.canvas.height - 5,);
     }
