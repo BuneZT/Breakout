@@ -1,2 +1,2 @@
-# Breakout-
+# Breakout
 Breakout phaser.js 
