@@ -32,6 +32,8 @@ export class Preloader extends Scene {
         this.load.setPath('assets');
 
         this.load.image(Assets.Ball, assetsMap[Assets.Ball]);
+        this.load.image(Assets.Paddle, assetsMap[Assets.Paddle]);
+
 
     }
 
