@@ -1,5 +1,7 @@
 import { Scene } from 'phaser';
 import { Assets } from '../enums/asset';
+import { BrickInfo } from '../interfaces/BrickInfo';
+
 
 export class Brick extends Phaser.Physics.Arcade.Sprite {
 
@@ -21,7 +23,7 @@ export class Brick extends Phaser.Physics.Arcade.Sprite {
     }
 
     // Static method to generate a grid of bricks
-    static generateBricks(scene: Scene, bricksInfo: any): Phaser.Physics.Arcade.StaticGroup {
+    static generateBricks(scene: Scene, bricksInfo: BrickInfo): Phaser.Physics.Arcade.StaticGroup {
         const bricks = scene.physics.add.staticGroup();
 
 

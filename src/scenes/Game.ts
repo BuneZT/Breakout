@@ -3,12 +3,12 @@ import { Ball } from '../objects/Ball';
 import { Paddle } from '../objects/Paddle';
 import { GameScene } from '../enums/gameScene';
 import { Brick } from '../objects/Brick';
+import { BrickInfo } from '../interfaces/BrickInfo';
 
 export class Game extends Scene {
     ball: Ball;
     paddle: Paddle;
-    bricks: Phaser.Physics.Arcade.StaticGroup
-        ;
+    bricks: Phaser.Physics.Arcade.StaticGroup;
 
 
     constructor() {
@@ -21,7 +21,7 @@ export class Game extends Scene {
         this.paddle = new Paddle(this, this.scale.width * 0.5, this.scale.height - 5,);
         this.physics.add.collider(this.ball, this.paddle);
         this.physics.world.on("worldbounds", this.detectBounds, this);
-        const bricksInfo = {
+        const bricksInfo: BrickInfo = {
             width: 50,
             height: 20,
             count: {
