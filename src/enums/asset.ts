@@ -1,4 +1,5 @@
 export enum Assets {
     Ball = "ball",
-    Paddle = 'paddle'
+    Paddle = 'paddle',
+    Brick = 'brick'
 }
