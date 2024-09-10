@@ -56,6 +56,12 @@ export class Game extends Scene {
 
     private ballHitBrick(_ball: any, brick: any) {
         brick.disableBody(true, true);
+
+        // TODO Fix win screen
+        // if (!this.bricks.getLength()) {
+        //     this.scene.start(GameScene.YouWin);
+
+        // }
     }
 
 
