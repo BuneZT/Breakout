@@ -53,6 +53,7 @@ export class Paddle extends Phaser.GameObjects.Sprite {
         const body = this.body as Phaser.Physics.Arcade.Body;
         let velocity = body.velocity.x;
 
+
         // check for paddle movement
         if (this.cursors.left.isDown) {
             velocity -= this.acceleration;
@@ -67,7 +68,7 @@ export class Paddle extends Phaser.GameObjects.Sprite {
             }
             // if velocity is less than drag, stop paddle to
             // prevent idle drifting
-            if (velocity < (this.drag * 1.1)) {
+            if (Math.abs(velocity) < (this.drag * 1.1)) {
                 velocity = 0;
             }
         }
