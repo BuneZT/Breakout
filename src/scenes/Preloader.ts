@@ -33,6 +33,8 @@ export class Preloader extends Scene {
 
         this.load.image(Assets.Ball, assetsMap[Assets.Ball]);
         this.load.image(Assets.Paddle, assetsMap[Assets.Paddle]);
+        this.load.image(Assets.Brick, assetsMap[Assets.Brick]);
+
 
 
     }

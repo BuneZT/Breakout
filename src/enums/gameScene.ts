@@ -1,5 +1,7 @@
 export enum GameScene {
     Game = "Game",
-    GameOver = "GameOver"
+    GameOver = "GameOver",
+    YouWin = "YouWin"
+
 
 }

@@ -1,6 +1,6 @@
 {
     "name": "breakout",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "src/main.js",
     "scripts": {
         "dev": "node log.js dev & webpack-dev-server --config webpack/config.dev.js --open",
