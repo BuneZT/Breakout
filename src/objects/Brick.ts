@@ -6,20 +6,8 @@ import { BrickInfo } from '../interfaces/BrickInfo';
 export class Brick extends Phaser.Physics.Arcade.Sprite {
 
 
-    constructor(scene: Scene, x: number, y: number,) {
-        // Call the Phaser.Sprite constructor
+    constructor(scene: Scene, x: number, y: number) {
         super(scene, x, y, Assets.Brick);
-
-        // Add the brick to the scene
-        scene.add.existing(this);
-
-        // Enable physics for the brick
-        scene.physics.world.enable(this);
-
-
-        // Set the brick as immovable (so it doesn't get pushed when hit)
-        const body = this.body as Phaser.Physics.Arcade.Body;
-        body.setImmovable(true);
     }
 
     // Static method to generate a grid of bricks
@@ -34,8 +22,7 @@ export class Brick extends Phaser.Physics.Arcade.Sprite {
                 const brickY = (row * (bricksInfo.height + bricksInfo.padding)) + bricksInfo.offset.top;
 
                 // Create a new Brick object and add it to the static group
-                const brick = new Brick(scene, brickX, brickY);
-                bricks.add(brick);
+                bricks.create(brickX, brickY, Assets.Brick);
             }
         }
 
